@@ -1,7 +1,10 @@
 var things = document.getElementsByClassName("name")
 for (var i = 0; i < things.length; i++){
     console.log(things[i].innerText)
-} //quesrtion michael
+} 
+//question michael
+
+
 // querySelector
 // Select a single element from the page.
 //(Returns the first element it finds that matches the query)
@@ -40,3 +43,32 @@ for (var i = 0; i< result.length; i++) {
 //forloop that changes all the content on the dom to say redacted
 
 
+// innerHTML - security risk
+// innerText - "expensive" means takes a long time
+// textContent is the best way to access text
+
+//var person = {name: "Joe"}
+//person.name = "Jim"
+//console.log(person)
+
+/**
+ * 1. Select the h1 element
+ * 2. Save the h1 element's text to a variable
+ * 3. Change the paragraph element's text to be the same as the text inside the h1
+ */
+
+
+//document.addEventListener('DOMContentLoaded', e => {
+    const h1 = document.querySelector("h1")
+
+    //h1.innerText = "Hello Bitches"
+//})
+        // select the h1 by a class, id, or even tag name
+    // in this example, i'm just selecting it by tag name
+
+
+    var text = document.querySelector("#header").textContent
+    //selected h1 by query selector
+    document.querySelector("#ptag").textContent = text
+   // changed the paragraph to match h1 by id
+   
