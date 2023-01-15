@@ -1,7 +1,7 @@
 var things = document.getElementsByClassName("name")
-for (var i = 0; i < things.length; i++){
+for (var i = 0; i < things.length; i++) {
     console.log(things[i].innerText)
-} 
+}
 //question michael
 
 
@@ -37,7 +37,7 @@ var result = document.querySelectorAll("ol#favorite-things > li")
 console.log(Array.from(result))
 //returns an actuall array  
 
-for (var i = 0; i< result.length; i++) {
+for (var i = 0; i < result.length; i++) {
     result[i].textContent = "** REDACTED **"
 }
 //forloop that changes all the content on the dom to say redacted
@@ -59,16 +59,33 @@ for (var i = 0; i< result.length; i++) {
 
 
 //document.addEventListener('DOMContentLoaded', e => {
-    const h1 = document.querySelector("h1")
+const h1 = document.querySelector("h1")
 
-    //h1.innerText = "Hello Bitches"
+//h1.innerText = "Hello Bitches"
 //})
-        // select the h1 by a class, id, or even tag name
-    // in this example, i'm just selecting it by tag name
+// select the h1 by a class, id, or even tag name
+// in this example, i'm just selecting it by tag name
 
 
-    var text = document.querySelector("#header").textContent
-    //selected h1 by query selector
-    document.querySelector("#ptag").textContent = text
-   // changed the paragraph to match h1 by id
-   
+var text = document.querySelector("#header").textContent
+//selected h1 by query selector
+document.querySelector("#ptag").textContent = text
+// changed the paragraph to match h1 by id
+
+//methods are called wiht parentheses 
+
+var newLi = document.createElement("li")
+newLi.textContent = "3"
+var myList = document.getElementById("my-list")
+myList.append(newLi)
+// added a new list item if we used prepend instead of append it would of added 3 to top of list
+
+//Add a paragraph after the existing unordered list with any text you want inside.
+ //* Do this completely in JavaScript!
+
+ var newP = document.createElement("p")
+newP.textContent = "V School rocks!"
+document.body.append(newP)
+newP.style.textAlign = "center" //centered paragraph
+newP.style.fontSize = "30px" //changed font soze of paragraph
+newP.style.color = "pink" //changed color by myself
