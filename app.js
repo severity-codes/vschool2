@@ -1,6 +1,6 @@
-var things = document.getElementsByClassName("name")
-for (var i = 0; i < things.length; i++) {
-    console.log(things[i].innerText)
+var names = document.getElementsByClassName("name")
+for (var i = 0; i < names.length; i++) {
+    console.log(names[i].innerText)
 }
 //question michael
 
@@ -72,20 +72,111 @@ var text = document.querySelector("#header").textContent
 document.querySelector("#ptag").textContent = text
 // changed the paragraph to match h1 by id
 
-//methods are called wiht parentheses 
+//methods are called with parentheses 
+
+//var newLi = document.createElement("li")
+//newLi.textContent = "3"
+//var myList = document.getElementById("my-list")
+//myList.append(newLi)
+// added a new list item if we used prepend instead of append it would of added 3 to top of list
+
+//Add a paragraph after the existing unordered list with any text you want inside.
+//* Do this completely in JavaScript!
+
+//var newP = document.createElement("p")
+//newP.textContent = "V School rocks!"
+//document.body.append(newP)
+//newP.style.textAlign = "center" //centered paragraph
+//newP.style.fontSize = "30px" //changed font soze of paragraph
+//newP.style.color = "pink" //changed color by myself
+
+var header = document.querySelector("#head2")
+console.log(typeof head2.style)
+// this is a nested object
+
+var header = document.querySelector("#head2")
+console.log(Object.keys(head2.style))
+//this console logs all the different styles you can use
+
+head2.style.color = "pink"
+head2.style.backgroundColor = "blue"
+head2.style.fontSize = "20px"
+
+//changed h1 to pink
+// fontSize
+// backgroundColor
+// display
+// textAlign
+// margin, padding, border
+
+document.body.style.backgroundColor = "pink"
+
+// className
+var className = document.querySelector("#head2").className
+console.log(className)
+
+// classList
+document.querySelector("#head2").classList.add("new-class")
+console.log(document.querySelector("#header").className)
+//added more classes to acsess
+document.querySelector("#head2").classList.remove("another")
+console.log(document.querySelector("#head2").className)
+//removed another from the class list
+
+var inputBox = document.getElementById("text-input")
+inputBox.value = "CHANGED!"
+console.log(inputBox.value)
+//changing the wording in the input box
+
+// method below we call with parentheses and string with tag name
 
 var newLi = document.createElement("li")
 newLi.textContent = "3"
 var myList = document.getElementById("my-list")
 myList.append(newLi)
-// added a new list item if we used prepend instead of append it would of added 3 to top of list
 
-//Add a paragraph after the existing unordered list with any text you want inside.
- //* Do this completely in JavaScript!
-
- var newP = document.createElement("p")
+var newP = document.createElement("p")
 newP.textContent = "V School rocks!"
 document.body.append(newP)
 newP.style.textAlign = "center" //centered paragraph
 newP.style.fontSize = "30px" //changed font soze of paragraph
-newP.style.color = "pink" //changed color by myself
+newP.style.color = " blue" //changed color by myself
+
+//innerhtml vs text content
+var myList = document.getElementById("my-list")
+console.log(myList.textContent)
+// above logs text content only below logs html and list content
+console.log(myList.innerHTML)
+myList.innerHTML += "<li>4</li>"
+// added a 4 to end of list just like append does
+document.body.innerHTML += "<p id='paragraph'>V School rocks!</p>"
+document.getElementById("paragraph").style.textAlign = "center"
+//added a paragraph to end of list like appwnd using += and body and p
+// and styles it by id
+
+var powerRangers = [
+    "Jason Lee Scott",
+    "Kimberly Hart",
+    "Zack Taylor",
+    "Trini Kwan",
+    "Billy Cranston",
+    "Biotch"
+]
+
+
+
+
+var rangersList = document.getElementById("rangers")
+
+for (var i = 0; i < powerRangers.length; i++) {
+    var newName = document.createElement("li")
+    newName.textContent = powerRangers[i]
+    rangersList.append(newName)
+}
+
+// forloop to append all the names in the list above
+// can add any name to above list and will show on page
+// can also do this by using innerHtml like for (var i = 0; i < powerRangers.length; i++) {
+   // rangersList.innerHTML += "<li>" + powerRangers[i] + "</li>"
+//} still a for loop
+
