@@ -180,3 +180,44 @@ for (var i = 0; i < powerRangers.length; i++) {
    // rangersList.innerHTML += "<li>" + powerRangers[i] + "</li>"
 //} still a for loop
 
+
+document.getElementById("header1").innerHTML = "serenity is queen"
+document.getElementById("header1").style.color = "blue"
+//changed the color too by myself yeet
+// changed my h1 to serenity is queen
+
+
+document.addEventListener('DOMContentLoaded', e => {
+    
+    const h1 = document.querySelector("header2")
+
+    header2.innerText = "This is a bitch"
+})
+// select the h1 by a class, id, or even tag name
+    // in this example, i'm just selecting it by ID name
+
+var list = document.getElementsByClassName("list-items");
+list[0].innerHTML = "Hello World!";
+   
+
+
+var result = document.querySelectorAll("ul#navbar > li")
+console.log(result)
+//returns a node list=array
+
+var result = document.querySelectorAll(".navbar > li")
+console.log(Array.from(result))
+ 
+
+for (var i = 0; i < result.length; i++) {
+    result[i].textContent = "** REDACTED **"
+}
+ 
+//returns an actuall array  
+
+
+document.querySelector('#consolelog').addEventListener('click', function() {
+    console.log(document.querySelector("#box").value);
+    document.querySelector("#box").value = '';
+    document.querySelector("#box").focus();
+})

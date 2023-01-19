@@ -3,3 +3,14 @@
     font-size: xx-large;
     margin:0 block;
 }
+#consolelog{
+    display: inline-block;
+    background-color: #dbcbf2;
+    padding: 10px;
+    width: 60px;
+    color: #ab0f0f;
+    
+  }
+ #consolelog:hover {
+    background-color: blue;
+  }
