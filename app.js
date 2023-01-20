@@ -177,7 +177,7 @@ for (var i = 0; i < powerRangers.length; i++) {
 // forloop to append all the names in the list above
 // can add any name to above list and will show on page
 // can also do this by using innerHtml like for (var i = 0; i < powerRangers.length; i++) {
-   // rangersList.innerHTML += "<li>" + powerRangers[i] + "</li>"
+// rangersList.innerHTML += "<li>" + powerRangers[i] + "</li>"
 //} still a for loop
 
 
@@ -188,17 +188,17 @@ document.getElementById("header1").style.color = "blue"
 
 
 document.addEventListener('DOMContentLoaded', e => {
-    
+
     const h1 = document.querySelector("header2")
 
     header2.innerText = "This is a bitch"
 })
 // select the h1 by a class, id, or even tag name
-    // in this example, i'm just selecting it by ID name
+// in this example, i'm just selecting it by ID name
 
 var list = document.getElementsByClassName("list-items");
 list[0].innerHTML = "Hello World!";
-   
+
 
 
 var result = document.querySelectorAll("ul#navbar > li")
@@ -207,17 +207,24 @@ console.log(result)
 
 var result = document.querySelectorAll(".navbar > li")
 console.log(Array.from(result))
- 
+
 
 for (var i = 0; i < result.length; i++) {
     result[i].textContent = "** REDACTED **"
 }
- 
+
 //returns an actuall array  
 
 
-document.querySelector('#consolelog').addEventListener('click', function() {
+document.querySelector('#consolelog').addEventListener('click', function () {
     console.log(document.querySelector("#box").value);
+    document.getElementById("mypara").innerText = document.querySelector("#box").value;
     document.querySelector("#box").value = '';
     document.querySelector("#box").focus();
+   
+
 })
+
+// after hitting submit focus made the message dissapear afmade my input submit to the console event listener does soemtning everytime and event happens
+
+
