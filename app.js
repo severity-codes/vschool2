@@ -224,7 +224,7 @@ document.querySelector('#consolelog').addEventListener('click', function () {
    
 
 })
-
+// line221 made my input box log a new paragraph to the page
 // after hitting submit focus made the message dissapear afmade my input submit to the console event listener does soemtning everytime and event happens
 
 
