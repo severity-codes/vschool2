@@ -59,7 +59,7 @@ for (var i = 0; i < result.length; i++) {
 
 
 //document.addEventListener('DOMContentLoaded', e => {
-const h1 = document.querySelector("h1")
+//const h1 = document.querySelector("h1")
 
 //h1.innerText = "Hello Bitches"
 //})
@@ -221,10 +221,44 @@ document.querySelector('#consolelog').addEventListener('click', function () {
     document.getElementById("mypara").innerText = document.querySelector("#box").value;
     document.querySelector("#box").value = '';
     document.querySelector("#box").focus();
-   
+
 
 })
 // line221 made my input box log a new paragraph to the page
 // after hitting submit focus made the message dissapear afmade my input submit to the console event listener does soemtning everytime and event happens
 
+
+// anoymous fuinctions nothing in parantheses = anonymous functon
+
+function myFunc() {
+
+}
+myFunc()
+//var myOtherFunc = function() {}
+
+document.getElementById("submit-button").addEventListener("click", function () {
+
+})
+
+const h1 = document.getElementById("clickable")
+h1.addEventListener("click", () => {
+    h1.textContent = "clicked"    
+})
+
+// removed funtionion keyword from line 244 and added arrow in its place van do this whenever you have an anonmyous call back funtion
+// if you have on eargument, dont need parentheses, removed them from e line 244
+// no argumnet you need parentheses
+const birds = ["robin", "pelican", "goose"]
+
+const bigBirds = birds.map(bird => "big " + bird)
+// removed return big plus bird and made an implicit return by adding it to arrow function
+
+
+// old way  function addTwo(first, second){
+    //return first + second
+//}
+// made it into arrow function
+
+const addTwo = (first, second) => first + second
+//leave parentheses becuase two arguments
 
