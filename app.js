@@ -236,14 +236,14 @@ function myFunc() {
 myFunc()
 //var myOtherFunc = function() {}
 
-document.getElementById("submit-button").addEventListener("click", function () {
+//document.getElementById("submit-button").addEventListener("click", function () {
 
-})
+//})
 
-const h1 = document.getElementById("clickable")
-h1.addEventListener("click", () => {
-    h1.textContent = "clicked"    
-})
+//const h1 = document.getElementById("clickable")
+//h1.addEventListener("click", () => {
+   // h1.textContent = "clicked"    
+//})
 
 // removed funtionion keyword from line 244 and added arrow in its place van do this whenever you have an anonmyous call back funtion
 // if you have on eargument, dont need parentheses, removed them from e line 244
@@ -262,3 +262,14 @@ const bigBirds = birds.map(bird => "big " + bird)
 const addTwo = (first, second) => first + second
 //leave parentheses becuase two arguments
 
+// we can grab forms without ids by names
+//if it has a dash in name or id use brackets becuase js see dashes as minus signs
+
+
+const form = document["my-form"]
+// submit event for button
+// any submit event needs prevent default to stop page from refreshing
+
+form.addEventListener("submit", function(event) {
+event.preventDefault()
+})
