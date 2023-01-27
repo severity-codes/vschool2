@@ -246,7 +246,7 @@ myFunc()
 //})
 
 // removed funtionion keyword from line 244 and added arrow in its place van do this whenever you have an anonmyous call back funtion
-// if you have on eargument, dont need parentheses, removed them from e line 244
+// if you have on argument, dont need parentheses, removed them from e line 244
 // no argumnet you need parentheses
 const birds = ["robin", "pelican", "goose"]
 
